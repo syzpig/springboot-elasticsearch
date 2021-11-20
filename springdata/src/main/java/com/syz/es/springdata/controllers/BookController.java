@@ -24,7 +24,7 @@ public class BookController {
     @RequestMapping(value = "/add_index", method = RequestMethod.POST)
     public ResponseEntity<String> indexDoc(@RequestBody Book book) {
         System.out.println("book===" + book);
-        bookRepository.save(book);
+         bookRepository.save(book);
         return new ResponseEntity<>("save executed!", HttpStatus.OK);
     }
 
@@ -34,8 +34,8 @@ public class BookController {
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public ResponseEntity<Book> getByName(@PathVariable("name") String name) {
+    @RequestMapping(value = "/name", method = RequestMethod.GET)
+    public ResponseEntity<Book> getByName(@RequestParam("name") String name) {
         Book book = bookRepository.findByName(name);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }

@@ -1,4 +1,4 @@
-package com.syz.es.springdata.models;
+package com.syz.es.springdatarest.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;

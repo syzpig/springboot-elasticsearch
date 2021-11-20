@@ -1,7 +1,8 @@
 spring:
-  data:
     elasticsearch:
-      cluster-nodes: localhost:9300 # 配置IP及端口号
+      rest:
+        uris: 172.17.0.122:9200
+ #     cluster-nodes: 172.17.0.122:9300 # 配置IP及端口号
 #      cluster-name: elasticsearch622 # 配置集群名，默认为elasticsearch，如果手动更改过，这里一定要指定
 #      repositories:
 #        enabled: true

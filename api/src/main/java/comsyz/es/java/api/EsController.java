@@ -227,6 +227,7 @@ public class EsController {
      * @param pageSize  每页大小
      * @return
      */
+
     @RequestMapping("/queryPage")
     public String queryPage(String startPage, String pageSize) {
         if (StringUtils.isNotBlank(startPage) && StringUtils.isNotBlank(pageSize)) {

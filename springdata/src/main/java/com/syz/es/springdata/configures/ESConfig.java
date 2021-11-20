@@ -10,6 +10,6 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
  */ 
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.glodon.repositories")
+@EnableElasticsearchRepositories(basePackages = "com.syz.es.springdata")
 public interface ESConfig {
 }

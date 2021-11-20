@@ -1,10 +1,11 @@
 package com.syz.es.restclient.models;
 
 /**
- * @author liuwg-a
- * @date 2018/9/16 19:19
- * @description
+ *  @author: syz
+ *  @Date: 2021/11/10 20:28
+ *  @Description:
  */
+
 public class Book {
     private String id;
     private String name;

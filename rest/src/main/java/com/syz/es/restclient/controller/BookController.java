@@ -15,12 +15,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-
 /**
- * @author liuwg-a
- * @date 2018/9/16 18:41
- * @description
+ *  @author: syz
+ *  @Date: 2021/11/10 20:28
+ *  @Description:
  */
+
 @RestController
 @RequestMapping("/rest/book")
 public class BookController {
