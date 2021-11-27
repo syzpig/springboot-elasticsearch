@@ -30,17 +30,25 @@ public class BookController {
         return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/getById", method = RequestMethod.GET)
-    public ResponseEntity<String> getById(@RequestParam("id") String id) {
-        Object ob = esService.getById(id);
+    @RequestMapping(value = "/str_index", method = RequestMethod.POST)
+    public ResponseEntity<String> indexDocStr(@RequestBody String book) {
+        System.out.println("book===" + book);
+        Object ob = esService.saveIndexStr(book);
         String json = JSON.toJSONString(ob);
         return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/getByName", method = RequestMethod.GET)
+    @RequestMapping(value = "/getById", method = RequestMethod.GET)
+    public ResponseEntity<String> getById(@RequestParam("id") String id) {
+        Object ob = esService.getByName(id);
+        String json = JSON.toJSONString(ob);
+        return new ResponseEntity<>(json, HttpStatus.OK);
+    }
+
+/*    @RequestMapping(value = "/getByName", method = RequestMethod.GET)
     public ResponseEntity<String> getByName(@RequestParam("name") String name) {
         Object ob = esService.getByName(name);
         String json = JSON.toJSONString(ob);
         return new ResponseEntity<>(json, HttpStatus.OK);
-    }
+    }*/
 }
